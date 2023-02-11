@@ -1,0 +1,448 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #35736e;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+
+  nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  #hero .container .shopping .content-shopping {
+    display: none;
+  }
+
+  /* box */
+  #hero .btn {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  #newStore .container .img-store {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+  /*  */
+  #about .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /*  */
+  #newStore .container .img-store {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  #newStore .container .img-store img {
+    position: relative;
+    z-index: 1;
+  }
+  img.img-4 {
+    position: relative;
+  }
+
+  #newStore .container img.rec {
+    position: absolute;
+    top: 88%;
+    left: 8px;
+  }
+  #newStore .container img.rec2 {
+    position: absolute;
+    top: 95%;
+    left: 8px;
+  }
+  #newStore .container .circle {
+    position: absolute;
+    top: 7%;
+    right: 30px;
+    transform: translateX(-50%);
+  }
+  #newStore .container .polygon {
+    display: none;
+  }
+  #best_deals .container .furniture {
+    display: block;
+    position: relative;
+  }
+  #best_deals .container .furniture .content-deals {
+    display: block;
+  }
+  #best_deals .container .furniture .content-deals .l-div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #best_deals .container .furniture .content-deals .r-div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #best_deals .container .furniture .content-deals {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #best_deals .container .furniture .content-deals .l-deal {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #best_deals .container .furniture .content-deals .r-deal {
+    width: 100%;
+  }
+  #best_deals .container .furniture img.img-furniture {
+    padding-top: 20px;
+    position: absolute;
+    top: 75%;
+    left: 0;
+    transform: translateX(0%);
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+  #discount_over .container .content-discount {
+    width: 100%;
+  }
+  #discount_over .container .content-discount .circle {
+    z-index: 99;
+    width: 300px;
+    height: 300px;
+  }
+  #discount_over .container .content-discount img {
+    z-index: 99;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media  (max-width:768px)   {
+  .container {
+    width: 100%;
+    padding: 20px 20px;
+  }
+
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .nav div.main_list {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
+
+  .nav div.show_list {
+    height: 200px;
+  }
+
+  .nav div.main_list ul {
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    top: 80px;
+    right: 0;
+    left: 0;
+    padding: 0;
+  }
+
+  .nav div.main_list ul li {
+    width: 100%;
+    height: 40px;
+    background-color: #35736e;
+  }
+
+  .nav div.main_list ul li a {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding: 10px 0;
+  }
+
+  .nav div.media_button {
+    display: block;
+  }
+  .btnRegistry {
+    display: none;
+  }
+  .reg {
+    display: block;
+  }
+  #hero .container .shopping .content-shopping {
+    display: none;
+  }
+
+  /* box */
+  #hero .btn {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .btn-hero {
+    display: block;
+    border: 0;
+    border-radius: 50%;
+    background-color: #35736e;
+    padding: 8px;
+  }
+  .two-div {
+    display: block;
+  }
+  .box {
+    display: none;
+  }
+
+  /* Opened box */
+  .box:target {
+    position: absolute;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* box content */
+  .box .content-one {
+    position: relative;
+    padding: 1.5em;
+    background-color: var(--secondary-color);
+  }
+
+  /* Close button */
+  .box .close {
+    position: relative;
+    display: block;
+  }
+
+  .box .close::after {
+    right: -1rem;
+    top: -1rem;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    text-align: c;
+    border-radius: 50%;
+    color: white;
+    content: "×";
+    cursor: pointer;
+  }
+
+  /* box overlay */
+  .box .close::before {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    content: "";
+    cursor: default;
+  }
+  #hero .container .shopping .one-div {
+    display: none;
+  }
+  #hero .container .shopping .one-div .content-one {
+    width: 100%;
+  }
+  #newStore .container .img-store {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+  /*  */
+  #about .container {
+    display: block;
+  }
+
+  #about .container .l-div img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+  }
+  #about .container .r-div {
+    width: 100%;
+  }
+  /*  */
+  #newStore .container .img-store {
+    position: relative;
+  }
+  #newStore .container .img-store img {
+    width: 90%;
+    position: relative;
+  }
+  #newStore .container img.rec {
+    position: absolute;
+    top: 94%;
+    left: 20px;
+  }
+  #newStore .container img.rec2 {
+    position: absolute;
+    top: 96%;
+    left: 20px;
+  }
+  img.img-4 {
+    position: relative;
+  }
+  #newStore .container .circle {
+    position: absolute;
+    top: 4%;
+    right: -20px;
+    transform: translateX(-50%);
+  }
+  #newStore .container .polygon {
+    display: none;
+  }
+  /*  */
+  #product .container .header-product {
+    text-align: center;
+    padding: 20px 0;
+  }
+  #product .container .header-product p.text-header {
+    font-size: 35px;
+  }
+  #product .container .header-product ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 20px 0;
+  }
+
+  #product .container .header-product ul li button {
+    width: 98px;
+    padding: 10px;
+    border: 0;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  #product .container .header-product ul li button.activebtn {
+    padding: 12px;
+    border-radius: 8px;
+  }
+  #product .container .header-product ul li button:hover {
+    padding: 12px;
+    border-radius: 8px;
+  }
+  #best_deals .container .furniture {
+    position: relative;
+  }
+  #best_deals .container .furniture .content-deals {
+    display: block;
+  }
+  #best_deals .container .furniture .content-deals .l-deal {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #best_deals .container .furniture .content-deals .r-deal {
+    width: 100%;
+  }
+  #best_deals .container .furniture img.img-furniture {
+    padding-top: 20px;
+    position: absolute;
+    top: 75%;
+    left: 0;
+    transform: translateX(0%);
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+  /*  */
+  /*Start media  discount_over */
+
+  #discount_over .container {
+    width: 100%;
+  }
+
+  #discount_over .container {
+    width: 100%;
+    position: relative;
+  }
+  #discount_over .container .content-discount {
+    display: block;
+    width: 100%;
+    position: relative;
+    top: -90px;
+  }
+  #discount_over .container .content-discount .l-div {
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  #discount_over .container .content-discount .r-div {
+    display: block;
+    margin: auto;
+  }
+  .r-div .circle {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: rgba(53, 115, 110, 0.4);
+    position: absolute;
+    top: -46%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #discount_over .container .content-discount .r-div img {
+    position: absolute;
+    width: 292px;
+    top: -238px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /*end media discount_over  */
+  #questions .container .content-question {
+    margin-bottom: 53px;
+  }
+  /*Start media footer */
+  footer .container .content-footer {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+  footer .container .content-footer .l-footer {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    border: 0;
+  }
+  footer .container .content-footer .m-footer {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    border: 0;
+  }
+  footer .container .content-footer .r-footer {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  /*End media footer */
+  /*  */
+}
+ 
