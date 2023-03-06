@@ -8,12 +8,7 @@ blockMobile.onclick = function () {
   mainListDiv.classList.toggle("show_list");
   blockMobile.classList.toggle("active");
 };
-let loader = document.getElementById("demo");
-window.addEventListener("load", () => {
-  loader.style.display = "none";
-});
-//
-// Swiper js
+ 
 
 
 
@@ -92,3 +87,70 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+
+ 
+
+
+// 
+
+var loader = document.getElementById('preloader');
+document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+      fade = loader;
+        var intervalID = setInterval(function () {
+              
+            if (!fade.style.opacity) {
+                fade.style.opacity = 1;
+            }
+              
+              
+            if (fade.style.opacity > 0) {
+                fade.style.opacity -= 0.1;
+            } 
+              
+            else {
+                clearInterval(intervalID);
+            }
+              
+        }, 150);
+        loader.style.display = "none";
+}
+};
+
+// 
+// let buttonQuestion = document.querySelector(".plus");
+// let inputAnswer = document.getElementById("inputAnswer1");
+
+// buttonQuestion.onclick= function(){
+//   inputAnswer.classList.toggle("answer")
+// }
+const buttons = document.querySelectorAll('.faq-toggle');
+
+
+
+buttons.forEach((button) =>{
+    button.addEventListener('click', () =>{
+        button.parentNode.classList.toggle('active')
+    })
+})
+
+// 
+function sendMail() {
+  var params = {
+    email: document.getElementById("email").value,
+  };
+
+  const serverID = "service_2sod1q1";
+  const templateID = "template_d3qnt0b";
+
+  emailjs.send(serverID, templateID, params)
+  .then((res) => {
+    document.getElementById("email").value = "";
+    console.log("res");
+    alert("success");
+  })
+  .catch((err) => console.log(err));
+  alert("success");
+  console.log("ahmed")
+}

@@ -55,13 +55,13 @@
 
   #newStore .container img.rec {
     position: absolute;
-    top: 88%;
-    left: 8px;
+    top: 89%;
+    left: 77px;
   }
   #newStore .container img.rec2 {
     position: absolute;
     top: 95%;
-    left: 8px;
+    left: 77px;
   }
   #newStore .container .circle {
     position: absolute;
@@ -372,16 +372,16 @@
     display: block;
   }
   /*  */
+  
   /*Start media  discount_over */
 
   #discount_over .container {
     width: 100%;
+    position: relative;
+
   }
 
-  #discount_over .container {
-    width: 100%;
-    position: relative;
-  }
+   
   #discount_over .container .content-discount {
     display: block;
     width: 100%;
